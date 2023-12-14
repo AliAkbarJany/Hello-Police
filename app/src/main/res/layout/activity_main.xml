@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#28ED92A3"
+    >
+    
+    
+    <ScrollView
+        android:id="@+id/bannerImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:neumorph_shadowColorDark="#023B8A"
+                app:neumorph_shadowColorLight="#BC4668AA"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/emergency_999"
+                    android:scaleType="fitXY"
+                    android:background="#28ED92A3"
+                    />
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:numColumns="2"
+                android:layout_below="@id/bannerImg"
+                android:layout_above="@id/thankCard"
+                />
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/thankCard"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:neumorph_shadowColorDark="#023B8A"
+                app:neumorph_shadowColorLight="#BC4668AA"
+
+                android:layout_alignParentBottom="true"
+                >
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+
+
+
+
+<!--    <GridView-->
+<!--        android:id="@+id/gridView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:numColumns="2"-->
+<!--        />-->
+
+
+
+
+
+</RelativeLayout>
