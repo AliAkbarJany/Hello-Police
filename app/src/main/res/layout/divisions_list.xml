@@ -9,7 +9,7 @@
     <soup.neumorphism.NeumorphCardView
         android:id="@+id/divCardView"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         app:neumorph_shadowColorDark="#C3955F"
         app:neumorph_shadowColorLight="#F2D49B"
         >
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="DIVISION"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:textSize="16sp"
 
             />

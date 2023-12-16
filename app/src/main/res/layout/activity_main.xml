@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#28ED92A3"
+    android:background="#40010929"
     >
     
     
@@ -23,17 +23,21 @@
 
             <soup.neumorphism.NeumorphCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 app:neumorph_shadowColorDark="#023B8A"
                 app:neumorph_shadowColorLight="#BC4668AA"
                 >
 
-                <ImageView
+
+                <androidx.viewpager2.widget.ViewPager2
+
+                    android:id="@+id/smartSlider"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/emergency_999"
-                    android:scaleType="fitXY"
-                    android:background="#28ED92A3"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     />
 
 
@@ -42,35 +46,73 @@
         </LinearLayout>
     </ScrollView>
 
-            <GridView
-                android:id="@+id/gridView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:numColumns="2"
-                android:layout_below="@id/bannerImg"
-                android:layout_above="@id/thankCard"
-                />
+    <LinearLayout
+        android:id="@+id/myLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/bannerImg"
+        android:layout_margin="5dp"
+        android:weightSum="30"
+        >
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Nothing"
+            android:textStyle="bold"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:background="@drawable/two_color_curved"
+            />
+        <ImageView
+            android:id="@+id/callButton"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:src="@drawable/call_icon"
+            android:layout_weight="10"
+            />
+
+        <TextView
+            android:id="@+id/callNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="999"
+            android:textStyle="bold"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:background="@drawable/two_color_curved"
+            />
+
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/thankCard"
+        android:layout_below="@id/myLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:numColumns="2" />
 
             <soup.neumorphism.NeumorphCardView
                 android:id="@+id/thankCard"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 app:neumorph_shadowColorDark="#023B8A"
                 app:neumorph_shadowColorLight="#BC4668AA"
-
                 android:layout_alignParentBottom="true"
                 >
 
+                    <include
+                        layout="@layout/thank_page"
+                        />
 
             </soup.neumorphism.NeumorphCardView>
-
-
-
-
 
 
 <!--    <GridView-->
@@ -80,9 +122,6 @@
 <!--        android:layout_margin="10dp"-->
 <!--        android:numColumns="2"-->
 <!--        />-->
-
-
-
 
 
 </RelativeLayout>

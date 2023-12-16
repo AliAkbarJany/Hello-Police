@@ -3,6 +3,7 @@ package com.rafsan.hellopolice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import soup.neumorphism.NeumorphCardView;
 
 public class ChattogramDiv extends AppCompatActivity {
 
+    TextView textMarque;
+
     GridView chattogramGridView;
 
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
@@ -26,6 +29,11 @@ public class ChattogramDiv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chattogram_div);
+
+        textMarque = findViewById(R.id.textMarque);
+        textMarque.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        textMarque.setSelected(true);
+
         chattogramGridView = findViewById(R.id.chattogramGridView);
 
         chattogramDisTable();

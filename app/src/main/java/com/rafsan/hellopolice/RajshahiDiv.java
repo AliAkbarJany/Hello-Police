@@ -3,6 +3,7 @@ package com.rafsan.hellopolice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +11,16 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import soup.neumorphism.NeumorphCardView;
 
 public class RajshahiDiv extends AppCompatActivity {
+
+    TextView textMarque;
 
     GridView rajshahiGridView;
 
@@ -26,6 +31,10 @@ public class RajshahiDiv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rajshahi_div);
+
+        textMarque = findViewById(R.id.textMarque);
+        textMarque.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        textMarque.setSelected(true);
 
         rajshahiGridView = findViewById(R.id.rajshahiGridView);
 

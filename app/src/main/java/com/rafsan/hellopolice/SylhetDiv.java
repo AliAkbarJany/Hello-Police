@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import soup.neumorphism.NeumorphCardView;
 
 public class SylhetDiv extends AppCompatActivity {
 
+    TextView textMarque;
+
     GridView sylhetGridView;
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
     HashMap<String,String> hashMap;
@@ -26,6 +29,10 @@ public class SylhetDiv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sylhet_div);
+
+        textMarque = findViewById(R.id.textMarque);
+        textMarque.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        textMarque.setSelected(true);
 
         sylhetGridView = findViewById(R.id.sylhetGridView);
 

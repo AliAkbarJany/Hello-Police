@@ -3,6 +3,7 @@ package com.rafsan.hellopolice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import soup.neumorphism.NeumorphCardView;
 
 public class RangpurDiv extends AppCompatActivity {
 
+    TextView textMarque;
+
     GridView rangpurGridView;
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
     HashMap<String,String> hashMap;
@@ -25,6 +28,10 @@ public class RangpurDiv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rangpur_div);
+
+        textMarque = findViewById(R.id.textMarque);
+        textMarque.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        textMarque.setSelected(true);
 
         rangpurGridView = findViewById(R.id.rangpurGridView);
 

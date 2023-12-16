@@ -1,19 +1,33 @@
 package com.rafsan.hellopolice;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.bdtopcoder.smart_slider.SliderAdapter;
+import com.bdtopcoder.smart_slider.SliderItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import soup.neumorphism.NeumorphCardView;
 
@@ -24,10 +38,48 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
     HashMap<String,String> hashMap;
 
+    private static final int REQUEST_CALL = 1;
+
+    TextView callNumber;
+    ImageView callButton;
+    private String CAll_PHONE;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Image slider==========Start===============================
+
+        ViewPager2 viewPager2 = findViewById(R.id.smartSlider);
+
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.emergency_999,"Emergency Service"));
+        sliderItems.add(new SliderItem(R.drawable.gov_info_333,"Government Information"));
+        sliderItems.add(new SliderItem(R.drawable.women_child,"Women & Child"));
+        sliderItems.add(new SliderItem(R.drawable.fire_service,"Fire Service"));
+//        sliderItems.add(new SliderItem("https://atikulislam.xyz/images/hero.jpg","Image from url"));
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,5000));
+
+        new SliderAdapter((position, title, view) -> {
+            Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show();
+        });
+
+        // Image slider==========End===============================
+
+        // Call System=========================================
+        callNumber = findViewById(R.id.callNumber);
+        callButton = findViewById(R.id.callButton);
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:01686527473"));
+                startActivity(intent);
+            }
+        });
 
         gridView = findViewById(R.id.gridView);
 //========================= Function/Method (Call)======================
@@ -37,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(myAdapter);
 
     }
+//= onCreate method end here=========================
+
 
 
 //    ===================== Custom Adapter=======================
@@ -146,4 +200,39 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(hashMap);
 
     }
+
+//========================================Function/Method=================
+
+//    private void call_button(){
+//        String number = callNumber.getText().toString();
+//
+//        if (number.trim().length()>0){
+//            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+//                ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+//            }
+//            else {
+//                String dial = "tel :"+number;
+//                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+//            }
+//        }
+//    }
+
+
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        if (requestCode == REQUEST_CALL) {
+//
+//            if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+//                call_button();
+//            }
+//            else {
+//                Toast.makeText(MainActivity.this,"Permission Denied",Toast.LENGTH_LONG).show();
+//            }
+//
+//        }
+//    }
+
+
 }

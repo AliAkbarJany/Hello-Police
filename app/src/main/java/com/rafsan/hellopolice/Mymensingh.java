@@ -3,6 +3,7 @@ package com.rafsan.hellopolice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import soup.neumorphism.NeumorphCardView;
 
 public class Mymensingh extends AppCompatActivity {
 
+    TextView textMarque;
+
     GridView mymensinghGridView;
 
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
@@ -26,6 +29,10 @@ public class Mymensingh extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mymensingh);
+
+        textMarque = findViewById(R.id.textMarque);
+        textMarque.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        textMarque.setSelected(true);
 
         mymensinghGridView = findViewById(R.id.mymensinghGridView);
 
