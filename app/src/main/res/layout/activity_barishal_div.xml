@@ -1,13 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BarishalDiv"
-    android:orientation="vertical"
+
     android:background="#011C40"
     >
+
+    <LinearLayout
+        android:id="@+id/myLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_tranparent"
+        android:layout_margin="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:lottie_rawRes="@raw/red_light"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:padding="5dp"
+                />
+
+        </LinearLayout>
+
+        <!--  ===============  one  ========    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Emergency Call"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+
+                android:gravity="center"
+                android:background="#04B2D9"
+                />
+            <ImageView
+                android:id="@+id/callButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:src="@drawable/call_icon"
+
+                />
+
+            <TextView
+                android:id="@+id/callNumber1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="999"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="#04B2D9"
+                />
+
+        </LinearLayout>
+
+        <!--  ===============  Two  ========    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/bannerImg"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Government Info"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                />
+            <ImageView
+                android:id="@+id/callButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:src="@drawable/call_icon"
+
+                />
+
+            <TextView
+                android:id="@+id/callNumber2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="333"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                />
+
+        </LinearLayout>
+        <!--  ===============  Three  ========    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/bannerImg"
+            android:layout_margin="5dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Fire Service"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                />
+            <ImageView
+                android:id="@+id/callButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:src="@drawable/call_icon"
+
+                />
+
+            <TextView
+                android:id="@+id/callNumber3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="16163"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/barishalGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myLayout"
+        android:numColumns="3"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +179,9 @@
         android:padding="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
+
+        android:background="@drawable/bottom_shade"
+        android:layout_alignParentBottom="true"
         >
 
         <TextView
@@ -32,11 +199,6 @@
 
     </LinearLayout>
 
-    <GridView
-        android:id="@+id/barishalGridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3"
-        />
 
-</LinearLayout>
+
+</RelativeLayout>

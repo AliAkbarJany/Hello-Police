@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView callNumber;
     ImageView callButton;
-    private String CAll_PHONE;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         sliderItems.add(new SliderItem(R.drawable.fire_service,"Fire Service"));
 //        sliderItems.add(new SliderItem("https://atikulislam.xyz/images/hero.jpg","Image from url"));
 
-        viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,5000));
+        viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,4000));
 
         new SliderAdapter((position, title, view) -> {
             Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show();
@@ -75,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String number = callNumber.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:01686527473"));
+                intent.setData(Uri.parse("tel:"+number));
                 startActivity(intent);
             }
         });
@@ -149,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, SylhetDiv.class));
                     }
                     else if (divName.contains("Rangpur")) {
-                        startActivity(new Intent(MainActivity.this, RajshahiDiv.class));
+                        startActivity(new Intent(MainActivity.this, RangpurDiv.class));
                     }
                     else if (divName.contains("Mymensingh")) {
                         startActivity(new Intent(MainActivity.this, Mymensingh.class));

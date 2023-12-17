@@ -53,33 +53,32 @@
         android:orientation="horizontal"
         android:layout_below="@id/bannerImg"
         android:layout_margin="5dp"
-        android:weightSum="30"
+        android:gravity="center"
         >
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Nothing"
+            android:text="Emergency Call"
             android:textStyle="bold"
-            android:layout_weight="10"
             android:gravity="center"
             android:background="@drawable/two_color_curved"
             />
         <ImageView
             android:id="@+id/callButton"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:src="@drawable/call_icon"
-            android:layout_weight="10"
+
             />
 
         <TextView
             android:id="@+id/callNumber"
-            android:layout_width="fill_parent"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:text="999"
             android:textStyle="bold"
-            android:layout_weight="10"
+
             android:gravity="center"
             android:background="@drawable/two_color_curved"
             />
