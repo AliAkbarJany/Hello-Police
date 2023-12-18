@@ -169,7 +169,7 @@ public class Mymensingh extends AppCompatActivity {
 
         hashMap = new HashMap<>();
         hashMap.put("districtName","Sherpur");
-        hashMap.put("policeCall","Sherpur");
+        hashMap.put("policeCall","01713-373523");
         hashMap.put("policeStationName","Sherpur Police Station");
         hashMap.put("history","শেরপুরের ঐতিহাসিক পটভূমি\n" +
                 "\n" +
@@ -180,7 +180,7 @@ public class Mymensingh extends AppCompatActivity {
 
         hashMap = new HashMap<>();
         hashMap.put("districtName","Mymensingh");
-        hashMap.put("policeCall","Mymensingh");
+        hashMap.put("policeCall","01320104098");
         hashMap.put("policeStationName","Mymensingh Police Station");
         hashMap.put("history","জেলার পটভূমি\n" +
                 "হাওর জঙ্গল মইষের শিং, এই তিনে ময়মনসিং’ প্রবাদ-প্রবচনে এভাবেই পরিচয় করানো হতো এক সময় ভারতবর্ষের বৃহত্তম জেলা ময়মনসিংহকে। ভারতবর্ষের সেই বৃহত্তম জেলা সময়ের বিবর্তনে ছয় জেলায় রূপান্তরিত হলেও জেলা সদরের গুরুত্ব তুলনামূলক বিচারে কমে যায় নি। বাংলাদেশের মানচিত্রে যে জেলাটি আজ ময়মনসিংহ জেলা হিসাবে চিহ্নিত তা বাংলাদেশের মধ্য-উত্তরাঞ্চলের ২৪০০২'৩১\" থেকে ২৫০২৫'৫৬\" উত্তর অক্ষাংশ এবং ৮৯০৩৯'০০\" থেকে ৯১০১৫'৩৫\" পূর্ব দ্রাঘিমাংশে অবস্থিত। ব্রহ্মপুত্র বিধৌত বাংলাদেশের এই উর্বর ভূমি শিক্ষা-শিল্প-সাহিত্য ও লোক-সংস্কৃতির এক বিপুল আধার।\n" +
@@ -192,7 +192,7 @@ public class Mymensingh extends AppCompatActivity {
 
         hashMap = new HashMap<>();
         hashMap.put("districtName","Jamalpur");
-        hashMap.put("policeCall","Jamalpur");
+        hashMap.put("policeCall","01713-373538");
         hashMap.put("policeStationName","Jamalpur Police Station");
         hashMap.put("history","জেলার পটভূমি\n" +
                 "জামালপুর জেলার ইতিহাস সম্পর্কে সঠিকভাবে ধারণা পেতে হলে প্রখ্যাত আউলিয়া হযরত শাহ জামাল (র:) ও হযরত শাহ কামাল (র:) এ দুই বুজুর্গ ব্যক্তির নাম স্মরণ করতে হয়। ইসলাম তথা মানবতার বাণী প্রচারের জন্য হযরত শাহ জামাল (র:) দিল্লীর বাদশাহ আকবরের সময়কালে সুদূর ইয়েমেন দেশ থেকে ইসলাম প্রচারের জন্য জামালপুরে তশরিফ রাখেন। জামালপুর শহরের আদি নাম সিংহজানী। হযরত শাহ জামালের (র:) নামে কোন মৌজা, গ্রাম হাট-বাজার কিছুই নেই।  আমাদের পরম সৌভাগ্য যে এ পূণ্যবান ব্যক্তির মাজার শরীফ জামালপুর শহরে অবস্থিত। তাঁর পবিত্র নামেই এ জেলার নামকরণ করা হয়েছে");
@@ -200,7 +200,7 @@ public class Mymensingh extends AppCompatActivity {
 
         hashMap = new HashMap<>();
         hashMap.put("districtName","Netrokona");
-        hashMap.put("policeCall","Netrokona");
+        hashMap.put("policeCall","01320-104228");
         hashMap.put("policeStationName","Netrokona Police Station");
         hashMap.put("history","নেত্রকোণা জেলার ইতিহাস ও ঐতিহ্যঃ\n" +
                 "\n" +

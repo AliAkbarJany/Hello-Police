@@ -54,7 +54,7 @@
                 android:textColor="#FFFFFF"
 
                 android:gravity="center"
-                android:background="#04B2D9"
+                android:background="@drawable/two_color_curved"
                 />
             <ImageView
                 android:id="@+id/callButton1"
@@ -72,7 +72,7 @@
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:gravity="center"
-                android:background="#04B2D9"
+                android:background="@drawable/two_color_curved"
                 />
 
         </LinearLayout>
