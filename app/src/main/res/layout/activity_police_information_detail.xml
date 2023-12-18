@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PoliceInformationDetail"
+    android:background="#011C40"
     >
 
     <soup.neumorphism.NeumorphCardView
@@ -25,16 +26,106 @@
 
     </soup.neumorphism.NeumorphCardView>
 
-    <TextView
-        android:id="@+id/textPoliceNum"
+    <LinearLayout
+        android:id="@+id/callLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Number"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_margin="20dp"
-
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/two_color"
         android:layout_below="@id/coverImg"
-        />
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/textPoliceStationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#04D98B"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/call_icon"
+                />
+
+            <TextView
+                android:id="@+id/textPoliceNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Number"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#04B2D9"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/thankCard"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        app:neumorph_shadowColorDark="#023B8A"
+        app:neumorph_shadowColorLight="#BC4668AA"
+
+        android:layout_below="@id/callLayout"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/textHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:background="@drawable/three_color_curved"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
 
 </RelativeLayout>
